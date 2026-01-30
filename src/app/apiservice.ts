@@ -5,13 +5,13 @@ import { Injectable } from '@angular/core';
   providedIn: 'root',
 })
 export class Apiservice {
-  constructor(private http:HttpClient){} 
+  constructor(private http: HttpClient) {}
 
-getproduct(){
-  return this.http.get("https://fakestoreapi.com/products")
-}
-   getsingleproduct(id:String)
-{
-  return this.http.get(`https://fakestoreapi.com/products/${id}`);
-}
+  getProduct() {
+    return this.http.get('https://fakestoreapi.com/products');
+  }
+
+  getSingleProduct(id: string) {
+    return this.http.get(`https://fakestoreapi.com/products/${id}`);
+  }
 }
