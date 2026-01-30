@@ -1,0 +1,37 @@
+<div class="home-container">
+  <!-- Hero Section -->
+  <div class="hero-section">
+    <div class="hero-content">
+      <h1 class="hero-title">{{ nestDetails.title }}</h1>
+      <p class="hero-tagline">{{ nestDetails.tagline }}</p>
+      <p class="hero-description">{{ nestDetails.description }}</p>
+      <a href="#features" class="btn btn-primary btn-lg mt-4">Explore More</a>
+    </div>
+  </div>
+
+  <!-- Features Section -->
+  <div id="features" class="features-section py-5">
+    <div class="container">
+      <h2 class="text-center mb-5">Why Choose Us</h2>
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-3" *ngFor="let feature of nestDetails.features">
+          <div class="feature-card text-center p-4">
+            <div class="feature-icon mb-3">{{ feature.icon }}</div>
+            <h5 class="feature-title mb-3">{{ feature.title }}</h5>
+            <p class="feature-description">{{ feature.description }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Call to Action Section -->
+  <div class="cta-section">
+    <div class="container text-center">
+      <h2 class="mb-4">Ready to Get Started?</h2>
+      <p class="mb-4">Discover how NestTechPark can transform your business</p>
+      <a routerLink="/contact" class="btn btn-success btn-lg me-3">Get in Touch</a>
+      <a routerLink="/service" class="btn btn-outline-success btn-lg">Learn More</a>
+    </div>
+  </div>
+</div>
